@@ -2,24 +2,24 @@ import './global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Navbar } from './components/nav'
+import { Navbar } from '../components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
+import Footer from '../components/footer'
 import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'eugene lee',
+    template: '%s | personal portfolio',
   },
-  description: 'This is my portfolio.',
+  description: 'hello, world.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'personal portfolio',
+    description: 'personal portfolio',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'eugene lee',
     locale: 'en_US',
     type: 'website',
   },

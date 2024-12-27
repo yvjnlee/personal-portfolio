@@ -1,0 +1,226 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+% -------------------- FONT --------------------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.75in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-6pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{\small#3} & \textit{\small#2 $|$ #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\educationSubheading}[4]{
+  \vspace{-4pt}\item
+    \begin{tabular*}{1.00\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \vspace{-4pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{-4pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\href{#2}{#1}} & \textit{\small#3} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{-12pt}\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING --------------------
+\begin{flushright}
+  \vspace{-8pt}
+  \color{gray}
+  % Last Updated on August 12th, 2023
+\end{flushright}
+
+\begin{center}
+    \textbf{\Huge \scshape Eugene Lee} \\ \vspace{8pt}
+    \small
+    (647)671-6567
+    $|$
+    \href{mailto:e33lee@uwaterloo.ca}{e33lee@uwaterloo.ca}
+    $|$
+    \href{https://www.linkedin.com/in/ygnlee/}
+    {linkedin.com/in/ygnlee} $  $
+    $|$
+    \href{https://github.com/yvjnlee}{github.com/yvjnlee} $  $
+\end{center}
+
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+\resumeSubHeadingListStart
+  
+    \educationSubheading
+      {University of Waterloo}{Expected April 2027}
+      {B.A.Sc. in Computer Engineering, Quantum Engineering Specialization}{}
+
+\resumeSubHeadingListEnd
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+\resumeSubHeadingListStart      
+
+    \resumeSubheading
+      {Backend Developer}{Toronto, ON}
+      {University of Toronto}{Sept 2024 -- Dec 2024}
+    \resumeItemListStart
+      \resumeItem{Converted a monolithic API into \textbf{microservices}, reducing database load by \textbf{40\%} by cutting redundant queries}
+      \resumeItem{Implemented security protocols using \textbf{OIDC} and \textbf{OAuth 2.0}, ensuring secure access for \textbf{60,000+} students}
+      \resumeItem{Deployed \textbf{Docker} microservice containers to \textbf{Azure Resource Groups}, cutting environment setup times by \textbf{50\%}}
+      \resumeItem{Migrated legacy mainframe code to \textbf{Node.js} and \textbf{TypeScript}, improving maintenance and execution speed by \textbf{25\%}}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Junior Application Developer}{Waterloo, ON}
+      {University of Waterloo}{Jan 2024 -- Apr 2024}
+      \resumeItemListStart
+        \resumeItem{Developed course management API using \textbf{ASP.NET} and \textbf{C\#}, streamlining data workflows with CRUD operations}
+        \resumeItem{Led redesign of a module using \textbf{Figma}, cutting design iteration time by \textbf{50\%}, improving decision-making efficiency}
+        \resumeItem{Integrated \textbf{React} components with \textbf{ASP.NET} backend APIs to auto-populate course information, reducing the number of manual fields by \textbf{30\%} and cutting staff input time by \textbf{25\%}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern}{Waterloo, ON}
+      {Foqus Technologies}{May 2023 -- Aug 2023}
+      \resumeItemListStart
+        \resumeItem{Developed backend services using \textbf{Nest.js}, implementing CRUD operations to manage job-related data}
+        \resumeItem{Applied \textbf{service workers} for background synchronization of medical information, reducing page load times by \textbf{30\%}}
+        \resumeItem{Cached frequently accessed data in \textbf{local storage}, reducing database calls and improving load times by \textbf{25\%}}
+        \resumeItem{Identified and supplied \textbf{DICOM} medical datasets used to train and fine-tune AI models, supporting the team's \textbf{quantum-algorithm-driven} solutions}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern}{San Francisco, CA}
+      {CyberFilm}{May 2023 -- Aug 2023}
+      \resumeItemListStart
+        \resumeItem{Developed a storyboard page, allowing users to create and manage scenes with \textbf{React} and \textbf{Redux}}
+        \resumeItem{Implemented an auto-save feature using \textbf{Firebase}, reducing risk of data loss and improving user satisfaction by \textbf{10\%}}
+        \resumeItem{Integrated \textbf{DALL-E} for real-time image generation, automating scene visualization based on user inputs}
+        \resumeItem{Optimized prompt engineering through \textbf{A/B testing}, improving image accuracy by \textbf{20\%} by refining model configurations for different camera angles and lighting conditions, resulting in annual savings of up to \textbf{\$10,000}}
+      \resumeItemListEnd
+          
+\resumeSubHeadingListEnd 
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+    {NVRS}{href{}}{Go, Python, Autogen, PineconeDB, Langchain, Docker, Kubernetes}
+    \resumeItemListStart
+        \resumeItem{Implemented a \textbf{Go}-based backend gateway to dynamically route user prompts to the appropriate AI agent, enhancing personalized interactions and task automation}
+        \resumeItem{Developed multiple AI agents using \textbf{Autogen} and \textbf{Llama 3.1}, including specialized agents for finance, health tracking, and personal tutoring, to assist users across various personal apps}
+        \resumeItem{Integrated AI agents into personal applications to automate tasks like habit tracking and financial advising, using \textbf{Python} and \textbf{FastAPI} to streamline backend services and AI functionality}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+    {Estia}{https://estiafrontend.vercel.app/}{React, Typescript, Redux, Express, Node}
+    \resumeItemListStart
+        \resumeItem{Built a \textbf{React} profile page as a personal portfolio for users, supporting \textbf{50+ monthly active users}}
+        \resumeItem{Architected the backend using \textbf{Express} with \textbf{Swagger-Autogen}, restricting access to endpoints defined in autogenerated \textbf{Swagger YAML} files, reducing unauthorized access and cutting integration errors by \textbf{30\%}}
+    \resumeItemListEnd
+
+    % \resumeProjectHeading
+    % {Hackathon}{href{}}{Python}
+    % \resumeItemListStart
+    %     \resumeItem{}
+    %     \resumeItem{}
+    %     \resumeItem{}
+    % \resumeItemListEnd
+
+    \resumeProjectHeading
+    {SSYPHS}{https://ssyphs.vercel.app/}{Next.js, PostgreSQL, AWS, TailwindCSS}
+    \resumeItemListStart
+        \resumeItem{Built a Group Habit Tracking App with \textbf{Next.js App Router}, enabling real-time habit updates}
+        \resumeItem{Integrated \textbf{NextAuth.js} with a custom mailing service using \textbf{UUID} and \textbf{nodemailer} for secure user invites}
+        \resumeItem{Hosted a \textbf{PostgreSQL} database by provisioning a database instance on \textbf{AWS}, ensuring reliable data management}
+    \resumeItemListEnd
+          
+\resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+        \item 
+            \textbf{Languages}: TypeScript, JavaScript, Python, Java, C/C++, C\#, Go, HTML, CSS, SQL \\
+
+            \textbf{Frameworks}: React, Node, Express, Nest.js, Redux, .NET, Autogen, Langchain \\
+
+            \textbf{Tools}: Docker, Kubernetes, AWS, Azure, Firebase, Anaconda, Figma, Git, MATLAB \\
+    }
+\end{itemize}
+
+\end{document}
