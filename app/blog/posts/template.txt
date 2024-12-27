@@ -1,0 +1,14 @@
+---
+title: 'hello, world!'
+publishedAt: '2024-12-27'
+summary: 'my first blog!'
+---
+[]
+## I wish...
+[]
+## My predictions for 2025
+[]
+## Reflections of the past year
+[]
+## Conclusion
+[]
