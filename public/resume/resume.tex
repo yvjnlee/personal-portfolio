@@ -13,6 +13,7 @@
 \usepackage{tabularx}
 \usepackage{xcolor}
 \usepackage{fontawesome5}
+\usepackage{amsmath}
 
 \input{glyphtounicode}
 
@@ -37,8 +38,8 @@
 
 % Section formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+  \vspace{-12pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Subsection formatting
 \titleformat{\subsection}{
@@ -56,14 +57,16 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} $|$ \textit{\small#3} & \textit{\small#2 $|$ #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \vspace{0pt}\item
+    \begin{tabular*}{\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \text{\small#3} & \text{\small#4} \\
+    \end{tabular*}
 }
 
 \newcommand{\educationSubheading}[4]{
-  \vspace{-4pt}\item
+  \vspace{0pt}\item
     \begin{tabular*}{1.00\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -77,10 +80,11 @@
     \end{tabular*}\vspace{-4pt}
 }
 
-\newcommand{\resumeProjectHeading}[3]{
-  \vspace{-4pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\href{#2}{#1}} & \textit{\small#3} \\
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{\textwidth}
+    {l@{\extracolsep{\fill}}r}
+      \small#1 & {\footnotesize #2} \\
     \end{tabular*}\vspace{-8pt}
 }
 
@@ -107,68 +111,78 @@
 \begin{center}
     \textbf{\Huge \scshape Eugene Lee} \\ \vspace{8pt}
     \small
-    (647)671-6567
-    $|$
+    \faIcon{envelope}
     \href{mailto:e33lee@uwaterloo.ca}{e33lee@uwaterloo.ca}
-    $|$
+    \faIcon{linkedin}
     \href{https://www.linkedin.com/in/ygnlee/}
     {linkedin.com/in/ygnlee} $  $
-    $|$
+    \faIcon{github}
     \href{https://github.com/yvjnlee}{github.com/yvjnlee} $  $
 \end{center}
-
 
 % -------------------- EDUCATION --------------------
 \section{Education}
 \resumeSubHeadingListStart
   
     \educationSubheading
-      {University of Waterloo}{Expected April 2027}
+      {University of Waterloo}{\textbf{Expected: April 2027}}
       {B.A.Sc. in Computer Engineering, Quantum Engineering Specialization}{}
 
 \resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+        \item 
+            \textbf{Languages}: Python, C, C++, C\#, Java, TypeScript, JavaScript, SystemVerilog, Bash, SQL \\
+            \textbf{Libraries \& Frameworks}: NumPy, Pandas, scikit-learn, React, Node, Express, Nest.js, Redux, .NET \\
+            \textbf{Tools}: Git, Linux, Docker, AWS, GCP, Azure, MATLAB, Jupyter Notebook, Anaconda \\
+            \textbf{Relevant Coursework}: Data Structures \& Algorithms, Linear Algebra, Probability \& Statistics, Signals \& Systems \\
+    }
+\end{itemize}
 
 % -------------------- EXPERIENCE --------------------
 \section{Experience}
 \resumeSubHeadingListStart      
 
     \resumeSubheading
-      {Backend Developer}{Toronto, ON}
+      {Backend Developer Intern}{Toronto, ON}
       {University of Toronto}{Sept 2024 -- Dec 2024}
-    \resumeItemListStart
-      \resumeItem{Converted a monolithic API into \textbf{microservices}, reducing database load by \textbf{40\%} by cutting redundant queries}
-      \resumeItem{Implemented security protocols using \textbf{OIDC} and \textbf{OAuth 2.0}, ensuring secure access for \textbf{60,000+} students}
-      \resumeItem{Deployed \textbf{Docker} microservice containers to \textbf{Azure Resource Groups}, cutting environment setup times by \textbf{50\%}}
-      \resumeItem{Migrated legacy mainframe code to \textbf{Node.js} and \textbf{TypeScript}, improving maintenance and execution speed by \textbf{25\%}}
-    \resumeItemListEnd
+        \resumeItemListStart
+            \resumeItem{Optimized API performance by consolidating redundant database queries, cutting \textbf{3x} query volume per request}
+            \resumeItem{Implemented role-based access control and network security using OIDC and OAuth 2.0 for \textbf{60,000+} users}
+            \resumeItem{Migrated on-premise services to Docker containers on Azure, reducing deployment time by \textbf{50\%}}
+            \resumeItem{Modernized legacy mainframe code, reducing system maintenance time from \textbf{48 hours} to \textbf{5 minutes}}
+        \resumeItemListEnd
 
     \resumeSubheading
-      {Junior Application Developer}{Waterloo, ON}
+      {Application Developer Intern}{Waterloo, ON}
       {University of Waterloo}{Jan 2024 -- Apr 2024}
       \resumeItemListStart
-        \resumeItem{Developed course management API using \textbf{ASP.NET} and \textbf{C\#}, streamlining data workflows with CRUD operations}
-        \resumeItem{Led redesign of a module using \textbf{Figma}, cutting design iteration time by \textbf{50\%}, improving decision-making efficiency}
-        \resumeItem{Integrated \textbf{React} components with \textbf{ASP.NET} backend APIs to auto-populate course information, reducing the number of manual fields by \textbf{30\%} and cutting staff input time by \textbf{25\%}}
+        \resumeItem{Developed course management API using ASP.NET and C\#, streamlining data workflows with CRUD operations}
+        \resumeItem{Led module redesign with Figma, reducing feedback cycles from \textbf{3 months} to \textbf{2 weeks} through stakeholder demos}
+        \resumeItem{Integrated custom APIs for automatic course data population, reducing time to manually input fields by \textbf{30\%}}
       \resumeItemListEnd
 
     \resumeSubheading
       {Software Engineer Intern}{Waterloo, ON}
       {Foqus Technologies}{May 2023 -- Aug 2023}
       \resumeItemListStart
-        \resumeItem{Developed backend services using \textbf{Nest.js}, implementing CRUD operations to manage job-related data}
-        \resumeItem{Applied \textbf{service workers} for background synchronization of medical information, reducing page load times by \textbf{30\%}}
-        \resumeItem{Cached frequently accessed data in \textbf{local storage}, reducing database calls and improving load times by \textbf{25\%}}
-        \resumeItem{Identified and supplied \textbf{DICOM} medical datasets used to train and fine-tune AI models, supporting the team's \textbf{quantum-algorithm-driven} solutions}
+        \resumeItem{Developed backend services using Nest.js, implementing CRUD operations to manage job-related data}
+        \resumeItem{Applied service workers for background synchronization of medical information, reducing page load times by \textbf{30\%}}
+        \resumeItem{Cached frequently accessed data in local storage, reducing database calls and improving load times by \textbf{25\%}}
+        \resumeItem{Identified and supplied DICOM medical datasets used to train and fine-tune AI models, supporting the team's quantum-algorithm-driven solutions}
       \resumeItemListEnd
 
     \resumeSubheading
       {Software Engineer Intern}{San Francisco, CA}
       {CyberFilm}{May 2023 -- Aug 2023}
       \resumeItemListStart
-        \resumeItem{Developed a storyboard page, allowing users to create and manage scenes with \textbf{React} and \textbf{Redux}}
-        \resumeItem{Implemented an auto-save feature using \textbf{Firebase}, reducing risk of data loss and improving user satisfaction by \textbf{10\%}}
-        \resumeItem{Integrated \textbf{DALL-E} for real-time image generation, automating scene visualization based on user inputs}
-        \resumeItem{Optimized prompt engineering through \textbf{A/B testing}, improving image accuracy by \textbf{20\%} by refining model configurations for different camera angles and lighting conditions, resulting in annual savings of up to \textbf{\$10,000}}
+        \resumeItem{Developed company's flagship storyboard feature serving \textbf{1000+} users using React and Redux}
+        \resumeItem{Built factory pattern pipeline to optimize prompts through GPT-4, reducing token length by \textbf{40\%}}
+        \resumeItem{Integrated DALL-E with dynamic character injection, improving acceptable image rate from \textbf{37\%} to \textbf{83\%}}
+        \resumeItem{Implemented contextual prompt optimization, projecting \textbf{\$10,000} savings from reduced regenerations at scale}
       \resumeItemListEnd
           
 \resumeSubHeadingListEnd 
@@ -178,49 +192,33 @@
 \resumeSubHeadingListStart
 
     \resumeProjectHeading
-    {NVRS}{href{}}{Go, Python, Autogen, PineconeDB, Langchain, Docker, Kubernetes}
+    {\href{https://github.com/yvjnlee/trading-system}
+    {\textbf{C\# Trading Engine} $|$ \textit{C\#}}}
+    {\href{https://github.com/yvjnlee/trading-system}{\underline{github.com/yvjnlee/trading-system}}}
     \resumeItemListStart
-        \resumeItem{Implemented a \textbf{Go}-based backend gateway to dynamically route user prompts to the appropriate AI agent, enhancing personalized interactions and task automation}
-        \resumeItem{Developed multiple AI agents using \textbf{Autogen} and \textbf{Llama 3.1}, including specialized agents for finance, health tracking, and personal tutoring, to assist users across various personal apps}
-        \resumeItem{Integrated AI agents into personal applications to automate tasks like habit tracking and financial advising, using \textbf{Python} and \textbf{FastAPI} to streamline backend services and AI functionality}
+        \resumeItem{Built an order matching engine with FIFO-based algorithm for market and limit order processing}
+        \resumeItem{Implemented TCP/IP server handling client order submissions, modifications, and cancellations}
+        \resumeItem{Designed an orderbook system with real-time trade matching and custom logging infrastructure}
+    \resumeItemListEnd
+    
+    \resumeProjectHeading
+    {\href{https://github.com/yvjnlee/wrrn}{\textbf{Personal Finance App} $|$ \textit{TypeScript, Express, Node}}}
+    {\href{https://github.com/yvjnlee/wrrn}{\underline{github.com/yvjnlee/wrrn}}}
+    \resumeItemListStart
+        \resumeItem{Built a financial data parser with PDF-parse, implementing column mapping system for flexible data ingestion}
+        \resumeItem{Integrated RSA encryption with crypto library to secure sensitive financial transaction data}
+        \resumeItem{Developed transaction aggregation pipeline for automated spending pattern analysis and budget tracking}
     \resumeItemListEnd
 
     \resumeProjectHeading
-    {Estia}{https://estiafrontend.vercel.app/}{React, Typescript, Redux, Express, Node}
+    {\href{}{\textbf{LLM FPGA Hardware Accelerator Lab} $|$ \textit{SystemVerilog, Xilinx Vivado}}}
+    {\href{}{\underline{}}}
     \resumeItemListStart
-        \resumeItem{Built a \textbf{React} profile page as a personal portfolio for users, supporting \textbf{50+ monthly active users}}
-        \resumeItem{Architected the backend using \textbf{Express} with \textbf{Swagger-Autogen}, restricting access to endpoints defined in autogenerated \textbf{Swagger YAML} files, reducing unauthorized access and cutting integration errors by \textbf{30\%}}
-    \resumeItemListEnd
-
-    % \resumeProjectHeading
-    % {Hackathon}{href{}}{Python}
-    % \resumeItemListStart
-    %     \resumeItem{}
-    %     \resumeItem{}
-    %     \resumeItem{}
-    % \resumeItemListEnd
-
-    \resumeProjectHeading
-    {SSYPHS}{https://ssyphs.vercel.app/}{Next.js, PostgreSQL, AWS, TailwindCSS}
-    \resumeItemListStart
-        \resumeItem{Built a Group Habit Tracking App with \textbf{Next.js App Router}, enabling real-time habit updates}
-        \resumeItem{Integrated \textbf{NextAuth.js} with a custom mailing service using \textbf{UUID} and \textbf{nodemailer} for secure user invites}
-        \resumeItem{Hosted a \textbf{PostgreSQL} database by provisioning a database instance on \textbf{AWS}, ensuring reliable data management}
+        \resumeItem{Designing MAC units, exp/div operations, and GELU activation functions in SystemVerilog simulation}
+        \resumeItem{Implementing systolic array matrix multiplication and address generators for FPGA deployment}
+        \resumeItem{Optimizing complete LLM acceleration design with iBERT integration and hardware validation}
     \resumeItemListEnd
           
 \resumeSubHeadingListEnd
-
-% -------------------- SKILLS --------------------
-\section{Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{
-        \item 
-            \textbf{Languages}: TypeScript, JavaScript, Python, Java, C/C++, C\#, Go, HTML, CSS, SQL \\
-
-            \textbf{Frameworks}: React, Node, Express, Nest.js, Redux, .NET, Autogen, Langchain \\
-
-            \textbf{Tools}: Docker, Kubernetes, AWS, Azure, Firebase, Anaconda, Figma, Git, MATLAB \\
-    }
-\end{itemize}
 
 \end{document}

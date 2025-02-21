@@ -44,7 +44,7 @@ function parseEducation(content: string): Education[] {
       institution: match[1].trim(),
       degree: match[3].trim(),
       startDate: "", // Not provided in the input
-      graduationDate: match[2].trim(),
+      graduationDate: match[2].replace(/\\textbf\{(.*?)\}/, '$1').trim(),
       honors: [],
     });
   }
@@ -152,7 +152,7 @@ function parseSkills(content: string): Skill[] {
     skillList.forEach((skill) => {
       skills.push({
         id: crypto.randomUUID(),
-        skillName: skill,
+        skillName: skill.replace(/\\./g, match => match[1] || ''),
       });
     });
   }

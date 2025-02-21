@@ -80,9 +80,8 @@ function ArrowIcon() {
         </ul>
   
         <p className="mb-8">
-          hi there! i'm a student in 3A studying computer engineering at the university of waterloo. 
-          my current interests include ai/machine learning, quantum computing, finance, and crypto.
-          if there is one thing i'd want to do in my life, i would like to have the opportunity to inspire others by creating a future that people are excited about.
+          hi there! i'm a 3A studying computer engineering student at the university of waterloo. 
+          my current interests include ai, quantum computing, quantitative finance, and crypto. 
         </p>
       </>
     );
